@@ -293,7 +293,7 @@
 <div class="cursor-ring" id="cursorRing"></div>
 
 <nav>
-  <a href="#hero" class="nav-logo">Sheerin Munabeer<span>.</span></a>
+  <a href="#hero" class="nav-logo">SM<span>.</span></a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -371,7 +371,7 @@
       <div class="card-divider"></div>
       <div class="card-links">
         <a href="https://github.com/SheerinMM" target="_blank" class="card-link">github.com/SheerinMM</a>
-        <a href="/cdn-cgi/l/email-protection#1d6e7578786f74737068737c7f746f5d7a707c7471337e7270" class="card-link">sheerinmunabir&#64;gmail.com</a>
+        <a href="mailto:sheerinmunabir@gmail.com" class="card-link">sheerinmunabir&#64;gmail&#46;com</a>
         <a href="https://www.linkedin.com/in/sheerin-munabeer/" target="_blank" class="card-link">LinkedIn Profile</a>
       </div>
     </div>
@@ -558,15 +558,15 @@
       <h3>Open to opportunities</h3>
       <p>Whether you're hiring, collaborating, or just want to talk software and AI — I'd love to hear from you.</p>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#e19289848493888f8c948f80838893a1868c80888dcf828e8c" class="contact-link"><span class="contact-link-icon">✉</span><span class="contact-link-text">sheerinmunabir&#64;gmail&#46;com</span></a>
+        <a href="mailto:sheerinmunabir@gmail.com" class="contact-link"><span class="contact-link-icon">✉</span><span class="contact-link-text">sheerinmunabir&#64;gmail&#46;com</span></a>
         <a href="https://github.com/SheerinMM" target="_blank" class="contact-link"><span class="contact-link-icon">⌥</span><span class="contact-link-text">github.com/SheerinMM</span></a>
         <a href="https://www.linkedin.com/in/sheerin-munabeer/" target="_blank" class="contact-link"><span class="contact-link-icon">↗</span><span class="contact-link-text">linkedin.com/in/sheerin-munabeer</span></a>
       </div>
     </div>
     <form class="contact-form reveal reveal-delay-2" onsubmit="handleSubmit(event)" method="POST" action="https://formspree.io/f/mgolbogk">
-      <div class="form-group"><label class="form-label">Your Name</label><input type="text" class="form-input" placeholder="John Smith" required/></div>
-      <div class="form-group"><label class="form-label">Email Address</label><input type="email" class="form-input" placeholder="john@company.com" required/></div>
-      <div class="form-group"><label class="form-label">Message</label><textarea class="form-textarea" placeholder="Tell me about the opportunity..."></textarea></div>
+      <div class="form-group"><label class="form-label">Your Name</label><input type="text" name="name" class="form-input" placeholder="John Smith" required/></div>
+      <div class="form-group"><label class="form-label">Email Address</label><input type="email" name="email" class="form-input" placeholder="john@company.com" required/></div>
+      <div class="form-group"><label class="form-label">Message</label><textarea name="message" class="form-textarea" placeholder="Tell me about the opportunity..."></textarea></div>
       <button type="submit" class="form-submit">Send Message →</button>
     </form>
   </div>
@@ -577,7 +577,7 @@
   <div class="footer-right">sheerinmunabir&#64;gmail&#46;com</div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
   const cursor = document.getElementById('cursor');
   const ring = document.getElementById('cursorRing');
   let mx=0,my=0,rx=0,ry=0;
@@ -590,7 +590,7 @@
 
   window.addEventListener('scroll',()=>{document.querySelector('nav').style.padding=window.scrollY>50?'0.8rem 4rem':'1.2rem 4rem';});
 
-  // Photo loaded directly from photo.jpg
+  // Photo loaded directly from photo.png
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -620,6 +620,8 @@
       setTimeout(() => { btn.textContent = original; btn.style.background = 'var(--accent)'; btn.disabled = false; }, 3000);
     }
   }
+
+  
 
     // Hamburger menu
   const hamburger = document.getElementById('hamburger');
