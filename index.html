@@ -19,13 +19,9 @@
 }
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:var(--font-body);line-height:1.6;overflow-x:hidden}
-
-/* scrollbar */
 ::-webkit-scrollbar{width:3px}
 ::-webkit-scrollbar-track{background:var(--bg)}
 ::-webkit-scrollbar-thumb{background:var(--border2);border-radius:2px}
-
-/* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:1.25rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .3s}
 nav.scrolled{background:rgba(7,8,10,.92);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:.9rem 5%}
 .nav-logo{font-family:var(--font-display);font-weight:700;font-size:1.1rem;color:var(--white);text-decoration:none;letter-spacing:-.02em}
@@ -44,19 +40,13 @@ nav.scrolled{background:rgba(7,8,10,.92);backdrop-filter:blur(20px);border-botto
 .mobile-nav.open{display:flex}
 .mobile-nav a{font-family:var(--font-display);font-size:2.2rem;font-weight:600;color:var(--white);text-decoration:none;transition:color .2s}
 .mobile-nav a:hover{color:var(--accent)}
-
-/* SECTIONS */
 section{padding:6rem 5%}
 .s-label{font-family:var(--font-mono);font-size:.68rem;color:var(--accent);letter-spacing:.15em;text-transform:uppercase;display:flex;align-items:center;gap:.75rem;margin-bottom:1rem}
 .s-label::after{content:'';flex:1;height:1px;background:linear-gradient(90deg,var(--border2),transparent);max-width:80px}
 .s-title{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--white);letter-spacing:-.03em;line-height:1.1;margin-bottom:1rem}
-
-/* REVEAL */
 .reveal{opacity:0;transform:translateY(32px);transition:opacity .65s ease,transform .65s ease}
 .reveal.visible{opacity:1;transform:translateY(0)}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}.d5{transition-delay:.5s}
-
-/* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;padding:0 5%;position:relative;overflow:hidden}
 .hero-orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 .orb1{width:500px;height:500px;background:radial-gradient(circle,rgba(110,231,183,.07),transparent 70%);top:-10%;right:-5%}
@@ -77,15 +67,15 @@ section{padding:6rem 5%}
 .stat-item .num{font-family:var(--font-display);font-size:1.8rem;font-weight:700;color:var(--white);letter-spacing:-.03em}
 .stat-item .lbl{font-family:var(--font-mono);font-size:.65rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase;margin-top:.2rem}
 @keyframes rise{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
-
-/* ABOUT */
 #about{background:var(--bg2)}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;max-width:1100px}
 .about-p{font-size:1.05rem;color:#9ca3af;line-height:1.85;margin-bottom:1.5rem}
 .about-p strong{color:var(--text);font-weight:500}
-.about-tags{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:2rem}
-.atag{padding:.35rem .85rem;background:var(--bg3);border:1px solid var(--border2);border-radius:3px;font-family:var(--font-mono);font-size:.68rem;color:var(--muted);transition:all .2s}
-.atag:hover{border-color:var(--accent);color:var(--accent)}
+.about-highlights{display:flex;flex-direction:column;gap:.6rem;margin-top:2rem}
+.ahl{display:flex;align-items:center;gap:.85rem;padding:.65rem 1rem;border:1px solid var(--border);border-radius:6px;background:var(--bg4);transition:border-color .2s,transform .2s}
+.ahl:hover{border-color:var(--accent);transform:translateX(4px)}
+.ahl-icon{font-size:.95rem;width:20px;text-align:center}
+.ahl-text{font-size:.85rem;color:var(--text)}
 .about-card{background:var(--bg3);border:1px solid var(--border2);border-radius:12px;padding:2rem;position:relative;overflow:hidden}
 .about-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
 .profile-img{width:130px;height:130px;border-radius:50%;border:2px solid var(--border2);overflow:hidden;margin:0 auto 1.5rem;display:block}
@@ -103,8 +93,6 @@ section{padding:6rem 5%}
 .card-link:last-child{border-bottom:none}
 .card-link:hover{color:var(--accent)}
 .card-link::before{content:'→';color:var(--accent);font-size:.6rem}
-
-/* SKILLS */
 #skills{background:var(--bg)}
 .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.25rem;max-width:1100px}
 .skill-box{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.5rem;transition:border-color .3s,transform .3s}
@@ -114,8 +102,6 @@ section{padding:6rem 5%}
 .stags{display:flex;flex-wrap:wrap;gap:.4rem}
 .stag{padding:.28rem .7rem;background:var(--bg);border:1px solid var(--border2);border-radius:3px;font-family:var(--font-mono);font-size:.65rem;color:var(--muted);transition:all .2s}
 .stag:hover{border-color:var(--accent2);color:var(--accent2);background:rgba(167,139,250,.05)}
-
-/* PROJECTS */
 #projects{background:var(--bg2)}
 .proj-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:1100px}
 .pcard{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
@@ -149,8 +135,6 @@ section{padding:6rem 5%}
 .pglink::before{content:'↗'}
 .pfeat-row{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
 .pemoji{font-size:4.5rem;line-height:1;padding:1.5rem;background:var(--bg4);border-radius:10px;border:1px solid var(--border);align-self:center}
-
-/* EXPERIENCE */
 #experience{background:var(--bg)}
 .exp-max{max-width:820px}
 .timeline{position:relative;padding-left:2rem}
@@ -163,8 +147,6 @@ section{padding:6rem 5%}
 .tbullets{list-style:none;display:flex;flex-direction:column;gap:.45rem}
 .tbullets li{font-size:.9rem;color:#6b7280;line-height:1.6;padding-left:1.2rem;position:relative}
 .tbullets li::before{content:'▹';position:absolute;left:0;color:var(--accent);font-size:.7rem;top:.12rem}
-
-/* EDUCATION */
 #education{background:var(--bg2)}
 .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;max-width:1100px}
 .ecard{background:var(--bg3);border:1px solid var(--border);border-radius:10px;padding:1.75rem;position:relative;overflow:hidden;transition:border-color .3s,transform .3s}
@@ -174,8 +156,7 @@ section{padding:6rem 5%}
 .esch{font-family:var(--font-mono);font-size:.68rem;color:var(--accent2);margin-bottom:.25rem}
 .eperiod{font-family:var(--font-mono);font-size:.62rem;color:var(--muted);margin-bottom:1rem}
 .egrade{display:inline-block;padding:.25rem .7rem;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.25);border-radius:3px;font-family:var(--font-mono);font-size:.65rem;color:#a78bfa}
-
-/* CONTACT */
+.egrade.green{background:rgba(110,231,183,.1);border-color:rgba(110,231,183,.25);color:var(--accent)}
 #contact{background:var(--bg)}
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1100px;align-items:start}
 .contact-h3{font-family:var(--font-display);font-size:1.35rem;font-weight:600;color:var(--white);margin-bottom:.85rem}
@@ -192,14 +173,10 @@ section{padding:6rem 5%}
 .ftextarea{min-height:110px;resize:none}
 .fsubmit{padding:.9rem 2rem;background:var(--accent);color:#000;font-family:var(--font-display);font-weight:600;font-size:.85rem;border:none;border-radius:4px;cursor:pointer;transition:transform .2s,box-shadow .2s;align-self:flex-start}
 .fsubmit:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(110,231,183,.25)}
-
-/* FOOTER */
 footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
 .fl{font-family:var(--font-mono);font-size:.65rem;color:var(--muted)}
 .fl span{color:var(--accent)}
 .fr{font-family:var(--font-mono);font-size:.65rem;color:var(--hint)}
-
-/* RESPONSIVE */
 @media(max-width:900px){
   .nav-links,.nav-cta{display:none}
   .hamburger{display:flex}
@@ -253,9 +230,9 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
   <div class="hero-orb orb2"></div>
   <div class="hero-grid"></div>
   <div class="hero-inner">
-    <div class="hero-tag">⚡ Open to opportunities · Matale, Sri Lanka</div>
+    <div class="hero-tag">&#9889; Open to opportunities &middot; Matale, Sri Lanka</div>
     <h1 class="hero-name">Sheerin<br/><span class="g">Munabeer</span></h1>
-    <p class="hero-sub">Associate Software Engineer — <strong>Full Stack & AI</strong></p>
+    <p class="hero-sub">Software Engineer &amp; AI &mdash; <strong>MSc Artificial Intelligence (2026&ndash;2027)</strong></p>
     <div class="hero-btns">
       <a href="#projects" class="btn-main">View My Work</a>
       <a href="#contact" class="btn-out">Get In Touch</a>
@@ -272,23 +249,20 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <!-- ABOUT -->
 <section id="about">
   <div class="section-header reveal">
-    <div class="s-label">01 — About</div>
+    <div class="s-label">01 &mdash; About</div>
     <h2 class="s-title">Who I Am</h2>
   </div>
   <div class="about-grid">
     <div class="reveal d1">
-      <p class="about-p">I'm an <strong>Associate Software Engineer</strong> from Matale, Sri Lanka, with a 2nd Class Upper Division BSc in Software Engineering. I build things that matter — from AI-powered tools for speech-impaired children to Azure cloud platforms serving enterprise clients.</p>
-      <p class="about-p">My undergraduate thesis produced a <strong>gesture recognition system achieving 99.1% accuracy</strong>, validated across 25 real participants. I recently built <strong>FakeGuard</strong> — a time-aware fake news detection system with BERT, RoBERTa, and three parallel NLP engines. Currently pursuing MSc in Artificial Intelligence (2026–2027)</strong>.</p>
-      <p class="about-p">I thrive at the intersection of clean engineering and real-world impact — React frontends, Azure backends, or transformer models running on GPU.</p>
-      <div class="about-tags">
-        <span class="atag">Machine Learning</span>
-        <span class="atag">NLP / Transformers</span>
-        <span class="atag">Computer Vision</span>
-        <span class="atag">Full Stack</span>
-        <span class="atag">Azure Cloud</span>
-        <span class="atag">Mobile Dev</span>
-        <span class="atag">Agile / Scrum</span>
-        <span class="atag">MSc AI (Planned)</span>
+      <p class="about-p">I'm a <strong>Software Engineer and AI practitioner</strong> from Matale, Sri Lanka, with a 2nd Class Upper Division BSc in Software Engineering. I build end-to-end AI systems &mdash; from fine-tuning transformer models on GPU to full-stack production APIs and Azure cloud platforms.</p>
+      <p class="about-p">I recently built <strong>FakeGuard</strong> &mdash; a time-aware fake news detection system with three parallel NLP engines, RoBERTa fine-tuning on Tesla T4 GPU, and a live analytics dashboard. My undergraduate thesis produced a <strong>gesture recognition system achieving 99.1% accuracy</strong> validated across 25 real participants.</p>
+      <p class="about-p">Currently pursuing an <strong>MSc in Artificial Intelligence</strong> (Mar 2026 &ndash; Mar 2027) at the University of Bedfordshire.</p>
+      <div class="about-highlights">
+        <div class="ahl"><span class="ahl-icon">&#127891;</span><span class="ahl-text">MSc Artificial Intelligence &mdash; In Progress (2026&ndash;2027)</span></div>
+        <div class="ahl"><span class="ahl-icon">&#129302;</span><span class="ahl-text">FakeGuard &mdash; RoBERTa, BERT, 3 parallel NLP engines, Tesla T4 GPU</span></div>
+        <div class="ahl"><span class="ahl-icon">&#129504;</span><span class="ahl-text">99.1% accuracy gesture recognition system &mdash; 25 real participants</span></div>
+        <div class="ahl"><span class="ahl-icon">&#9729;</span><span class="ahl-text">Azure cloud platform &amp; full-stack development</span></div>
+        <div class="ahl"><span class="ahl-icon">&#127760;</span><span class="ahl-text">Trilingual &mdash; English (Fluent), Sinhala (Advanced), Tamil (Native)</span></div>
       </div>
     </div>
     <div class="about-card reveal d2">
@@ -296,8 +270,8 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
         <img src="photo.png" alt="Sheerin Munabeer" onerror="this.parentElement.innerHTML='<div class=profile-fallback>SM</div>'"/>
       </div>
       <div class="card-name">Sheerin Munabeer</div>
-      <div class="card-role">// associate_software_engineer</div>
-      <div class="card-loc">📍 Matale, Sri Lanka</div>
+      <div class="card-role">// software_engineer &amp; ai_practitioner</div>
+      <div class="card-loc">&#128205; Matale, Sri Lanka</div>
       <div class="avail"><div class="avail-dot"></div><span class="avail-text">Available for opportunities</span></div>
       <div class="card-divider"></div>
       <a href="https://github.com/SheerinMM" target="_blank" class="card-link">github.com/SheerinMM</a>
@@ -310,7 +284,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <!-- SKILLS -->
 <section id="skills">
   <div class="section-header reveal">
-    <div class="s-label">02 — Skills</div>
+    <div class="s-label">02 &mdash; Skills</div>
     <h2 class="s-title">What I Work With</h2>
   </div>
   <div class="skills-grid">
@@ -320,14 +294,14 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     </div>
     <div class="skill-box reveal d2">
       <div class="skill-box-title">AI / ML</div>
-      <div class="stags"><span class="stag">Machine Learning</span><span class="stag">Deep Learning</span><span class="stag">NLP</span><span class="stag">Computer Vision</span><span class="stag">Transfer Learning</span><span class="stag">Transformer Models</span><span class="stag">SHAP Explainability</span><span class="stag">Hyperparameter Tuning</span></div>
+      <div class="stags"><span class="stag">Machine Learning</span><span class="stag">Deep Learning</span><span class="stag">NLP</span><span class="stag">Computer Vision</span><span class="stag">Transfer Learning</span><span class="stag">Transformer Models</span><span class="stag">SHAP Explainability</span><span class="stag">Hyperparameter Tuning</span><span class="stag">Cross Validation</span><span class="stag">Feature Engineering</span></div>
     </div>
     <div class="skill-box reveal d3">
       <div class="skill-box-title">ML Frameworks</div>
-      <div class="stags"><span class="stag">TensorFlow</span><span class="stag">Keras</span><span class="stag">PyTorch</span><span class="stag">HuggingFace</span><span class="stag">scikit-learn</span><span class="stag">XGBoost</span><span class="stag">spaCy</span><span class="stag">VADER</span><span class="stag">NLTK</span><span class="stag">OpenCV</span><span class="stag">MediaPipe</span><span class="stag">pandas</span><span class="stag">NumPy</span></div>
+      <div class="stags"><span class="stag">TensorFlow</span><span class="stag">Keras</span><span class="stag">PyTorch</span><span class="stag">HuggingFace</span><span class="stag">scikit-learn</span><span class="stag">XGBoost</span><span class="stag">spaCy</span><span class="stag">VADER</span><span class="stag">NLTK</span><span class="stag">TextBlob</span><span class="stag">OpenCV</span><span class="stag">MediaPipe</span><span class="stag">pandas</span><span class="stag">NumPy</span></div>
     </div>
     <div class="skill-box reveal d1">
-      <div class="skill-box-title">Frontend & Mobile</div>
+      <div class="skill-box-title">Frontend &amp; Mobile</div>
       <div class="stags"><span class="stag">React</span><span class="stag">Angular</span><span class="stag">Flutter</span><span class="stag">HTML/CSS</span><span class="stag">Chart.js</span></div>
     </div>
     <div class="skill-box reveal d2">
@@ -335,8 +309,8 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
       <div class="stags"><span class="stag">FastAPI</span><span class="stag">Flask</span><span class="stag">Node.js</span><span class="stag">.NET</span><span class="stag">Django</span><span class="stag">Spring Boot</span><span class="stag">Express</span><span class="stag">REST APIs</span></div>
     </div>
     <div class="skill-box reveal d3">
-      <div class="skill-box-title">Cloud & Tools</div>
-      <div class="stags"><span class="stag">Azure Service Bus</span><span class="stag">Azure Blob Storage</span><span class="stag">Firebase</span><span class="stag">Google Colab</span><span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">JupyterLab</span><span class="stag">SQLite</span><span class="stag">MongoDB</span></div>
+      <div class="skill-box-title">Cloud &amp; Tools</div>
+      <div class="stags"><span class="stag">Azure Service Bus</span><span class="stag">Azure Blob Storage</span><span class="stag">Firebase</span><span class="stag">Google Colab</span><span class="stag">Git</span><span class="stag">GitHub</span><span class="stag">JupyterLab</span><span class="stag">SQLite</span><span class="stag">MongoDB</span><span class="stag">Postman</span></div>
     </div>
   </div>
 </section>
@@ -344,7 +318,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <!-- PROJECTS -->
 <section id="projects">
   <div class="section-header reveal">
-    <div class="s-label">03 — Projects</div>
+    <div class="s-label">03 &mdash; Projects</div>
     <h2 class="s-title">Things I've Built</h2>
   </div>
   <div class="proj-grid">
@@ -353,20 +327,21 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="pcard feat reveal">
       <div class="pfeat-row">
         <div>
-          <div class="pcard-top"><span class="ptype ai">AI · NLP · Full Stack</span><span class="pyear">2026</span></div>
-          <div class="ptitle">FakeGuard — Time-Aware Fake News Detection</div>
-          <p class="pdesc">A full-stack fake news detection platform that monitors articles continuously and updates credibility scores as stories evolve. Three parallel NLP engines: mutation tracking (spaCy, difflib), emotional manipulation scoring (VADER, TextBlob), and temporal credibility decay (NewsAPI). Fine-tuned RoBERTa and BERT on LIAR dataset (12,791 PolitiFact-labelled statements) on Tesla T4 GPU. Full analytics dashboard with score timeline showing credibility changes over time.</p>
+          <div class="pcard-top"><span class="ptype ai">AI &middot; NLP &middot; Full Stack</span><span class="pyear">2026</span></div>
+          <div class="ptitle">FakeGuard &mdash; Time-Aware Fake News Detection</div>
+          <p class="pdesc">Full-stack fake news detection platform with three parallel NLP engines: mutation tracking (spaCy, difflib), emotional manipulation scoring (VADER, TextBlob), and temporal credibility decay (NewsAPI). Fine-tuned RoBERTa and BERT on LIAR dataset (12,791 PolitiFact-labelled statements) on Tesla T4 GPU. Live analytics dashboard with score timeline showing credibility decay over time. Production REST API with automated background monitoring resuming on server restart.</p>
           <div class="pmetrics">
             <div class="pm"><strong>63%</strong> RoBERTa accuracy</div>
             <div class="pm"><strong>0.996</strong> ROC-AUC</div>
             <div class="pm"><strong>12,791</strong> training samples</div>
-            <div class="pm"><strong>Tesla T4</strong> GPU trained</div>
+            <div class="pm"><strong>Tesla T4</strong> GPU</div>
             <div class="pm"><strong>3</strong> parallel engines</div>
+            <div class="pm"><strong>TF-IDF</strong> 13,814 features</div>
           </div>
           <div class="pstack"><span class="ptag">Python</span><span class="ptag">FastAPI</span><span class="ptag">RoBERTa</span><span class="ptag">BERT</span><span class="ptag">XGBoost</span><span class="ptag">spaCy</span><span class="ptag">VADER</span><span class="ptag">TF-IDF</span><span class="ptag">SHAP</span><span class="ptag">SQLite</span><span class="ptag">Chart.js</span></div>
           <a href="https://github.com/SheerinMM/fakeguard" target="_blank" class="pglink">github.com/SheerinMM/fakeguard</a>
         </div>
-        <div class="pemoji">🛡️</div>
+        <div class="pemoji">&#128737;</div>
       </div>
     </div>
 
@@ -374,9 +349,9 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="pcard feat reveal d1">
       <div class="pfeat-row">
         <div>
-          <div class="pcard-top"><span class="ptype ai">AI · Computer Vision · Medical</span><span class="pyear">2025</span></div>
+          <div class="pcard-top"><span class="ptype ai">AI &middot; Computer Vision &middot; Medical</span><span class="pyear">2025</span></div>
           <div class="ptitle">Brain Tumour MRI Classification</div>
-          <p class="pdesc">Deep learning system classifying MRI scans into four tumour categories using EfficientNetB0 transfer learning. Diagnosed a critical preprocessing mismatch that caused near-random predictions — resolving it improved accuracy from ~33% to 91.62%. Applied augmentation, BatchNormalization, Dropout, EarlyStopping, and LR scheduling.</p>
+          <p class="pdesc">Deep learning system classifying MRI scans into four tumour categories using EfficientNetB0 transfer learning. Diagnosed a critical preprocessing mismatch that caused near-random predictions &mdash; resolving it improved accuracy from ~33% to 91.62%. Applied augmentation, BatchNormalization, Dropout, EarlyStopping, and LR scheduling.</p>
           <div class="pmetrics">
             <div class="pm"><strong>91.62%</strong> test accuracy</div>
             <div class="pm"><strong>0.983</strong> mean ROC-AUC</div>
@@ -384,9 +359,9 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
             <div class="pm"><strong>EfficientNetB0</strong> backbone</div>
           </div>
           <div class="pstack"><span class="ptag">Python</span><span class="ptag">TensorFlow</span><span class="ptag">Keras</span><span class="ptag">EfficientNetB0</span><span class="ptag">scikit-learn</span><span class="ptag">NumPy</span><span class="ptag">Matplotlib</span></div>
-<a href="https://github.com/SheerinMM/brain-tumour-mri-classification-" target="_blank" class="pglink">github.com/SheerinMM/brain-tumour-mri-classification</a>
+          <a href="https://github.com/SheerinMM/brain-tumour-mri-classification-" target="_blank" class="pglink">github.com/SheerinMM/brain-tumour-mri-classification</a>
         </div>
-        <div class="pemoji">🧠</div>
+        <div class="pemoji">&#129504;</div>
       </div>
     </div>
 
@@ -394,9 +369,9 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
     <div class="pcard feat reveal d2">
       <div class="pfeat-row">
         <div>
-          <div class="pcard-top"><span class="ptype ai">AI · Undergraduate Thesis</span><span class="pyear">2025</span></div>
+          <div class="pcard-top"><span class="ptype ai">AI &middot; Undergraduate Thesis</span><span class="pyear">2025</span></div>
           <div class="ptitle">Gesture-Based Communication System for Speech-Impaired Children</div>
-          <p class="pdesc">Browser-based AAC system enabling speech-impaired children to communicate through hand gestures — no special hardware. Supports Sinhala, Tamil, and English with culturally adapted interfaces and natural speech synthesis. All processing on-device for full privacy. Validated across 25 real participants including children, educators, and therapists.</p>
+          <p class="pdesc">Browser-based AAC system enabling speech-impaired children to communicate through hand gestures &mdash; no special hardware needed. Supports Sinhala, Tamil, and English with culturally adapted interfaces and natural speech synthesis. All ML processing runs on-device for full privacy. Validated across 25 real participants including children, educators, and therapists.</p>
           <div class="pmetrics">
             <div class="pm"><strong>99.1%</strong> accuracy</div>
             <div class="pm"><strong>&lt;200ms</strong> response</div>
@@ -405,23 +380,24 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
             <div class="pm"><strong>4.3/5</strong> satisfaction</div>
           </div>
           <div class="pstack"><span class="ptag">Python</span><span class="ptag">TensorFlow.js</span><span class="ptag">MediaPipe</span><span class="ptag">Flask</span><span class="ptag">Firebase</span><span class="ptag">JavaScript</span></div>
-<a href="https://github.com/SheerinMM/Project_Shak_9899" target="_blank" class="pglink">github.com/SheerinMM/Project_Shak_9899</a>
-        <div class="pemoji">🤟</div>
+          <a href="https://github.com/SheerinMM/Project_Shak_9899" target="_blank" class="pglink">github.com/SheerinMM/Project_Shak_9899</a>
+        </div>
+        <div class="pemoji">&#129335;</div>
       </div>
     </div>
 
     <!-- Cashbook -->
     <div class="pcard reveal d1">
-      <div class="pcard-top"><span class="ptype client">Client · Live in Production</span><span class="pyear">2025</span></div>
+      <div class="pcard-top"><span class="ptype client">Client &middot; Live in Production</span><span class="pyear">2025</span></div>
       <div class="ptitle">Mobile Cashbook Application</div>
-      <p class="pdesc">Led a 5-member Agile team to build an offline-first financial management app delivered to a real client. Local SQLite storage with Firebase cloud sync.</p>
+      <p class="pdesc">Led a 5-member Agile team to build an offline-first financial management app delivered to a real client and currently live in production. Local SQLite storage with Firebase cloud sync.</p>
       <div class="pmetrics"><div class="pm"><strong>5-member</strong> team led</div><div class="pm"><strong>Live</strong> in production</div></div>
       <div class="pstack"><span class="ptag">Flutter</span><span class="ptag">Dart</span><span class="ptag">SQLite</span><span class="ptag">Firebase</span></div>
     </div>
 
     <!-- Food Delivery -->
     <div class="pcard reveal d2">
-      <div class="pcard-top"><span class="ptype web">Full Stack · Web</span><span class="pyear">2024</span></div>
+      <div class="pcard-top"><span class="ptype web">Full Stack &middot; Web</span><span class="pyear">2024</span></div>
       <div class="ptitle">Food Delivery System</div>
       <p class="pdesc">Full-stack food delivery web app with real-time order tracking, user authentication, and restaurant management dashboard on the MERN stack.</p>
       <div class="pstack"><span class="ptag">React</span><span class="ptag">Node.js</span><span class="ptag">MongoDB</span><span class="ptag">Express</span></div>
@@ -429,7 +405,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
     <!-- Auction -->
     <div class="pcard reveal d3">
-      <div class="pcard-top"><span class="ptype web">Full Stack · Web</span><span class="pyear">2024</span></div>
+      <div class="pcard-top"><span class="ptype web">Full Stack &middot; Web</span><span class="pyear">2024</span></div>
       <div class="ptitle">Auction Vehicle System</div>
       <p class="pdesc">Web platform for vehicle auctioning with bidding logic, vehicle listings, and admin management using a relational database backend.</p>
       <div class="pstack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">SQL</span></div>
@@ -437,7 +413,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
     <!-- Computer Repair -->
     <div class="pcard reveal d1">
-      <div class="pcard-top"><span class="ptype web">Full Stack · Web</span><span class="pyear">2023</span></div>
+      <div class="pcard-top"><span class="ptype web">Full Stack &middot; Web</span><span class="pyear">2023</span></div>
       <div class="ptitle">Computer Repairing Shop Website</div>
       <p class="pdesc">Full-stack site with service booking, job tracking, and customer management. React frontend with Java Spring Boot backend.</p>
       <div class="pstack"><span class="ptag">React</span><span class="ptag">Java</span><span class="ptag">Spring Boot</span><span class="ptag">SQL</span></div>
@@ -445,7 +421,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
     <!-- Grocery -->
     <div class="pcard reveal d2">
-      <div class="pcard-top"><span class="ptype mobile">Mobile · Android</span><span class="pyear">2023</span></div>
+      <div class="pcard-top"><span class="ptype mobile">Mobile &middot; Android</span><span class="pyear">2023</span></div>
       <div class="ptitle">Grocery Shop Application</div>
       <p class="pdesc">Android app with product browsing, cart management, and real-time Firebase sync for inventory and orders.</p>
       <div class="pstack"><span class="ptag">Android Studio</span><span class="ptag">Java</span><span class="ptag">Firebase</span></div>
@@ -453,7 +429,7 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 
     <!-- Plant Shop -->
     <div class="pcard reveal d3">
-      <div class="pcard-top"><span class="ptype web">Full Stack · Web</span><span class="pyear">2023</span></div>
+      <div class="pcard-top"><span class="ptype web">Full Stack &middot; Web</span><span class="pyear">2023</span></div>
       <div class="ptitle">Plant Shop Website</div>
       <p class="pdesc">E-commerce style website with product listings, category filtering, and a clean storefront UI backed by SQL.</p>
       <div class="pstack"><span class="ptag">HTML</span><span class="ptag">CSS</span><span class="ptag">JavaScript</span><span class="ptag">SQL</span></div>
@@ -465,31 +441,31 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-header reveal">
-    <div class="s-label">04 — Experience</div>
+    <div class="s-label">04 &mdash; Experience</div>
     <h2 class="s-title">Where I've Worked</h2>
   </div>
   <div class="exp-max">
     <div class="timeline">
       <div class="titem reveal d1">
         <div class="tdot"></div>
-        <div class="tperiod">Jun 2025 — Jan 2026</div>
+        <div class="tperiod">Jun 2025 &mdash; Jan 2026</div>
         <div class="ttitle">Software Engineering Intern</div>
-        <div class="tco">MindReading Technologies — Remote</div>
+        <div class="tco">MindReading Technologies &mdash; Remote</div>
         <ul class="tbullets">
-          <li>Developed and enhanced React-based web application features.</li>
-          <li>Contributed to debugging, testing, and performance optimisation.</li>
-          <li>Participated in sprint planning, code reviews, and Agile ceremonies.</li>
+          <li>Developed and maintained web application features using modern JavaScript technologies.</li>
+          <li>Contributed to debugging, testing, performance optimisation, and code reviews.</li>
+          <li>Participated in sprint planning and Agile ceremonies.</li>
         </ul>
       </div>
       <div class="titem reveal d2">
         <div class="tdot"></div>
-        <div class="tperiod">Aug 2025 — Oct 2025</div>
+        <div class="tperiod">Aug 2025 &mdash; Oct 2025</div>
         <div class="ttitle">Associate Software Engineer (Contract)</div>
-        <div class="tco">Cloud Platform Startup — Remote</div>
+        <div class="tco">Spotto AI (via Senior Technical Lead) &mdash; Remote</div>
         <ul class="tbullets">
-          <li>Developed multi-tenant Azure cloud platform features including React admin portal and Chrome extension.</li>
-          <li>Integrated Azure Service Bus and Blob Storage for scalable billing data processing.</li>
-          <li>Built ETL pipelines for automated cloud billing workflows.</li>
+          <li>Built cloud-based backend services and application features for production environments.</li>
+          <li>Developed ETL pipelines for automated business data processing using Azure Service Bus and Azure Blob Storage.</li>
+          <li>Built multi-tenant platform features including React admin portal and Chrome extension.</li>
           <li>Delivered production-ready features within Agile sprint cycles.</li>
         </ul>
       </div>
@@ -500,26 +476,26 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <!-- EDUCATION -->
 <section id="education">
   <div class="section-header reveal">
-    <div class="s-label">05 — Education</div>
+    <div class="s-label">05 &mdash; Education</div>
     <h2 class="s-title">My Background</h2>
   </div>
   <div class="edu-grid">
-<div class="ecard reveal d1">
-  <div class="edeg">MSc Artificial Intelligence</div>
-  <div class="esch">University of Bedfordshire</div>
-  <div class="eperiod">Mar 2026 – Mar 2027 · In Progress</div>
-  <span class="egrade">Currently Enrolled</span>
-</div>
     <div class="ecard reveal d1">
-      <div class="edeg">BSc (Hons.) Software Engineering</div>
+      <div class="edeg">MSc Artificial Intelligence</div>
       <div class="esch">University of Bedfordshire</div>
-      <div class="eperiod">2025 · Colombo, Sri Lanka</div>
-      <span class="egrade">Second Class Upper Division</span>
+      <div class="eperiod">Mar 2026 &ndash; Mar 2027 &middot; Colombo, Sri Lanka</div>
+      <span class="egrade green">In Progress</span>
     </div>
     <div class="ecard reveal d2">
+      <div class="edeg">BSc (Hons.) Software Engineering</div>
+      <div class="esch">University of Bedfordshire</div>
+      <div class="eperiod">2025 &middot; Colombo, Sri Lanka</div>
+      <span class="egrade">Second Class Upper Division</span>
+    </div>
+    <div class="ecard reveal d3">
       <div class="edeg">Higher National Diploma in Information Technology</div>
       <div class="esch">SLIIT City UNI</div>
-      <div class="eperiod">2022 – 2024 · Colombo, Sri Lanka</div>
+      <div class="eperiod">2022 &ndash; 2024 &middot; Colombo, Sri Lanka</div>
     </div>
   </div>
 </section>
@@ -527,46 +503,41 @@ footer{padding:2rem 5%;border-top:1px solid var(--border);display:flex;align-ite
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-header reveal">
-    <div class="s-label">06 — Contact</div>
+    <div class="s-label">06 &mdash; Contact</div>
     <h2 class="s-title">Let's Talk</h2>
   </div>
   <div class="contact-grid">
     <div class="reveal d1">
       <h3 class="contact-h3">Open to opportunities</h3>
-      <p class="contact-p">Whether you're hiring, collaborating, or just want to talk software and AI — I'd love to hear from you.</p>
+      <p class="contact-p">Whether you're hiring, collaborating, or just want to talk software and AI &mdash; I'd love to hear from you.</p>
       <div class="clinks">
-        <a href="mailto:sheerinmunabir@gmail.com" class="clink"><span class="clink-ico">✉</span><span class="clink-txt">sheerinmunabir@gmail.com</span></a>
-        <a href="https://github.com/SheerinMM" target="_blank" class="clink"><span class="clink-ico">⌥</span><span class="clink-txt">github.com/SheerinMM</span></a>
-        <a href="https://www.linkedin.com/in/sheerin-munabeer/" target="_blank" class="clink"><span class="clink-ico">↗</span><span class="clink-txt">linkedin.com/in/sheerin-munabeer</span></a>
+        <a href="mailto:sheerinmunabir@gmail.com" class="clink"><span class="clink-ico">&#9993;</span><span class="clink-txt">sheerinmunabir@gmail.com</span></a>
+        <a href="https://github.com/SheerinMM" target="_blank" class="clink"><span class="clink-ico">&#8997;</span><span class="clink-txt">github.com/SheerinMM</span></a>
+        <a href="https://www.linkedin.com/in/sheerin-munabeer/" target="_blank" class="clink"><span class="clink-ico">&#8599;</span><span class="clink-txt">linkedin.com/in/sheerin-munabeer</span></a>
       </div>
     </div>
     <form class="cform reveal d2" onsubmit="handleForm(event)" method="POST" action="https://formspree.io/f/mgolbogk">
       <div><label class="flabel">Your Name</label><input type="text" name="name" class="finput" placeholder="John Smith" required/></div>
       <div><label class="flabel">Email Address</label><input type="email" name="email" class="finput" placeholder="john@company.com" required/></div>
       <div><label class="flabel">Message</label><textarea name="message" class="ftextarea" placeholder="Tell me about the opportunity..."></textarea></div>
-      <button type="submit" class="fsubmit" id="fsub">Send Message →</button>
+      <button type="submit" class="fsubmit" id="fsub">Send Message &rarr;</button>
     </form>
   </div>
 </section>
 
 <footer>
-  <div class="fl">Designed & built by <span>Sheerin Munabeer</span> · 2026</div>
+  <div class="fl">Designed &amp; built by <span>Sheerin Munabeer</span> &middot; 2026</div>
   <div class="fr">sheerinmunabir@gmail.com</div>
 </footer>
 
 <script>
-// Nav scroll
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled',window.scrollY>50)
 })
-
-// Reveal on scroll
 const obs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')})
 },{threshold:.08,rootMargin:'0px 0px -40px 0px'})
 document.querySelectorAll('.reveal').forEach(el=>obs.observe(el))
-
-// Hamburger
 const ham=document.getElementById('ham')
 const mob=document.getElementById('mob')
 ham.addEventListener('click',()=>{
@@ -579,8 +550,6 @@ function closeMob(){
   mob.classList.remove('open')
   document.body.style.overflow=''
 }
-
-// Form
 async function handleForm(e){
   e.preventDefault()
   const btn=document.getElementById('fsub')
@@ -594,17 +563,17 @@ async function handleForm(e){
       body:new FormData(e.target)
     })
     if(res.ok){
-      btn.textContent='Message Sent ✓'
+      btn.textContent='Message Sent \u2713'
       btn.style.background='#22c55e'
       e.target.reset()
       setTimeout(()=>{btn.textContent=orig;btn.style.background='var(--accent)';btn.disabled=false},4000)
     }else{
-      btn.textContent='Failed — Try Again'
+      btn.textContent='Failed \u2014 Try Again'
       btn.style.background='#ef4444'
       setTimeout(()=>{btn.textContent=orig;btn.style.background='var(--accent)';btn.disabled=false},3000)
     }
   }catch{
-    btn.textContent='Failed — Try Again'
+    btn.textContent='Failed \u2014 Try Again'
     btn.style.background='#ef4444'
     setTimeout(()=>{btn.textContent=orig;btn.style.background='var(--accent)';btn.disabled=false},3000)
   }
